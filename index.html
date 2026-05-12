@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HABIT - Navegue por tópicos</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <strong class="logo">HABIT</strong>
+
+        <!-- Overlay de navegação mobile -->
+        <nav id="main-nav" class="nav-menu" aria-label="Navegação principal">
+          <div class="menu-header">
+            <strong class="logo-menu">HABIT</strong>
+            <button class="close-menu" aria-label="Fechar menu">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+
+          <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Páginas</a></li>
+            <li><a href="#">Destaques</a></li>
+            <li><a href="#">Assinar</a></li>
+            <li><a href="#">Admin</a></li>
+          </ul>
+
+          <div class="menu-footer-mobile">
+            <a href="#" class="btn-login-mobile">Entrar</a>
+          </div>
+        </nav>
+
+        <!-- Ações do header: busca inline no mobile first; lupa reservada p/ breakpoints futuros -->
+        <div class="header-actions">
+          <button
+            type="button"
+            class="search-toggle"
+            aria-label="Abrir busca"
+            hidden
+          >
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+
+          <form role="search" class="search-form">
+            <label for="buscar" class="sr-only">Buscar conteúdo</label>
+            <input
+              type="search"
+              id="buscar"
+              name="q"
+              placeholder="Buscar"
+              autocomplete="off"
+              enterkeyhint="search"
+            />
+            <button type="submit">
+              <span class="sr-only">Buscar</span
+              ><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            </button>
+          </form>
+
+          <a href="#" class="btn-login">Entrar</a>
+
+          <button
+            class="menu-toggle"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="main-nav"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Navegue por tópicos de interesse</h1>
+        <p>
+          Descubra conteúdos por categorias, posts em destaque e as escolhas do
+          editor.
+        </p>
+        <div class="hero-buttons">
+          <a href="#" class="btn-primary">Explorar categorias</a>
+          <a href="#" class="btn-secondary">Assine a newsletter</a>
+        </div>
+        <img src="https://placehold.co/600x400" alt="" />
+      </section>
+
+      <!-- Categorias populares -->
+      <section
+        class="popular-categories"
+        aria-labelledby="titulo-cat-populares"
+      >
+        <h2 id="titulo-cat-populares">Categorias Populares</h2>
+        <div class="grid-categories">
+          <article><h3>Work</h3></article>
+          <article><h3>Books</h3></article>
+          <article><h3>Techno</h3></article>
+        </div>
+      </section>
+
+      <!-- Todas as categorias -->
+      <section class="all-categories">
+        <h2>Todas as Categorias</h2>
+        <nav aria-label="Tags de categorias">
+          <ul>
+            <li><a href="#">Negócios</a></li>
+            <li><a href="#">Techno</a></li>
+            <li><a href="#">Produtividade</a></li>
+            <li><a href="#">eCommerce</a></li>
+            <li><a href="#">Mailing</a></li>
+            <li><a href="#">Educação</a></li>
+            <li><a href="#">Filme</a></li>
+            <li><a href="#">Lifestyle</a></li>
+            <li><a href="#">Alimentação</a></li>
+            <li><a href="#">Social</a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <!-- Posts em destaque + Sidebar -->
+      <div class="content-wrapper">
+        <section class="featured-posts" aria-labelledby="titulo-posts-destaque">
+          <h2 id="titulo-posts-destaque">Postagens em Destaque</h2>
+
+          <article class="post-card">
+            <img
+              src="https://placehold.co/200x200"
+              alt="Capa do post: Erros de Design que Todos Devem Evitar"
+            />
+            <div class="post-content">
+              <div>
+                <time datetime="2026-11-02">02 Nov 2026</time>
+                <span aria-hidden="true">•</span>
+                <span class="post-tag">Destaque</span>
+              </div>
+              <h3>Erros de Design que Todos Devem Evitar</h3>
+              <p class="read-time">3 min de leitura</p>
+            </div>
+          </article>
+
+          <article class="post-card">
+            <img
+              src="https://placehold.co/200x200"
+              alt="Capa do post: Erros de Design que Todos Devem Evitar"
+            />
+            <div class="post-content">
+              <div>
+                <time datetime="2025-07-31">31 Jul 2025</time>
+                <span aria-hidden="true">•</span>
+                <span class="post-tag">Destaque</span>
+              </div>
+
+              <h3>As maiores Empresas por Receitas</h3>
+              <p class="read-time">8 min de leitura</p>
+            </div>
+          </article>
+        </section>
+
+        <aside class="sidebar" aria-labelledby="titulo-escolhas-editor">
+          <h2 id="titulo-escolhas-editor">Escolhas do Editor</h2>
+          <ul>
+            <li><a href="#">O uso negativo da internet</a></li>
+            <li><a href="#">O segredo do brainstorm</a></li>
+            <li><a href="#">Escalar para pequenos negócios</a></li>
+            <li><a href="#">O futuro do trabalho remoto</a></li>
+          </ul>
+        </aside>
+      </div>
+
+      <!-- Barra de marcas/parceiros -->
+      <section class="brand-bar" aria-label="Parceiros e marcas">
+        <ul>
+          <li>Instagram</li>
+          <li>Work</li>
+          <li>Bags</li>
+          <li>Lamp</li>
+          <li>Books</li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- ========== RODAPÉ ========== -->
+    <footer>
+      <p>&copy; 2025 HABIT • Todos os direitos reservados</p>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/29e9b51bce.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/script.js"></script>
+  </body>
+</html>
