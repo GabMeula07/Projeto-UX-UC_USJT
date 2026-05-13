@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Categoria: Techno — Habit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/category.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <strong class="logo">HABIT</strong>
+
+        <!-- Overlay de navegação mobile -->
+        <nav id="main-nav" class="nav-menu" aria-label="Navegação principal">
+          <div class="menu-header">
+            <strong class="logo-menu">HABIT</strong>
+            <button class="close-menu" aria-label="Fechar menu">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+
+          <ul>
+            <li><a href="./index.html">Início</a></li>
+            <li><a href="#">Páginas</a></li>
+            <li><a href="./destaque.html">Destaques</a></li>
+            <li><a href="./assinar.html">Assinar</a></li>
+            <li><a href="#">Admin</a></li>
+          </ul>
+
+          <div class="menu-footer-mobile">
+            <a href="#" class="btn-login-mobile">Entrar</a>
+          </div>
+        </nav>
+
+        <!-- Ações do header: busca inline no mobile first; lupa reservada p/ breakpoints futuros -->
+        <div class="header-actions">
+          <button
+            type="button"
+            class="search-toggle"
+            aria-label="Abrir busca"
+            hidden
+          >
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+
+          <form role="search" class="search-form">
+            <label for="buscar" class="sr-only">Buscar conteúdo</label>
+            <input
+              type="search"
+              id="buscar"
+              name="q"
+              placeholder="Buscar"
+              autocomplete="off"
+              enterkeyhint="search"
+            />
+            <button
+              type="submit"
+              class="btn-secondary search-form__submit"
+              aria-label="Buscar"
+            >
+              <span class="search-form__submit-label">Buscar</span>
+              <i
+                class="fa-solid fa-magnifying-glass search-form__submit-icon"
+                aria-hidden="true"
+              ></i>
+            </button>
+          </form>
+
+          <a href="#" class="btn-secondary btn-login">Entrar</a>
+
+          <button
+            class="menu-toggle"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="main-nav"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ── Conteúdo principal ──────────────────────────────── -->
+    <main>
+      <div class="container">
+        <!-- Cabeçalho da categoria -->
+        <div class="category-header">
+          <h1>Categoria: Techno</h1>
+
+          <!-- Tabs de filtro -->
+          <ul class="filter-tabs" role="tablist" aria-label="Ordenar posts">
+            <li role="presentation">
+              <a href="#" class="active" role="tab" aria-selected="true"
+                >Popular</a
+              >
+            </li>
+            <li role="presentation">
+              <a href="#" role="tab" aria-selected="false">Mais recentes</a>
+            </li>
+            <li role="presentation">
+              <a href="#" role="tab" aria-selected="false">IA</a>
+            </li>
+            <li role="presentation">
+              <a href="#" role="tab" aria-selected="false">Produtividade</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Grade de posts -->
+        <section class="category-grid" aria-label="Posts da categoria Techno">
+          <article class="post-card-cat">
+            <div class="post-card-cat__thumb">
+              <img
+                src="https://placehold.co/600x375/e8edec/c0cecc?text=+"
+                alt="Título da Postagem 1"
+              />
+            </div>
+            <div class="post-card-cat__body">
+              <h2 class="post-card-cat__title">Título da Postagem 1</h2>
+              <time class="post-card-cat__date" datetime="2025-07-31"
+                >31 Jul 2025</time
+              >
+            </div>
+          </article>
+
+          <article class="post-card-cat">
+            <div class="post-card-cat__thumb">
+              <img
+                src="https://placehold.co/600x375/e8edec/c0cecc?text=+"
+                alt="Título da Postagem 2"
+              />
+            </div>
+            <div class="post-card-cat__body">
+              <h2 class="post-card-cat__title">Título da Postagem 2</h2>
+              <time class="post-card-cat__date" datetime="2025-07-31"
+                >31 Jul 2025</time
+              >
+            </div>
+          </article>
+
+          <article class="post-card-cat">
+            <div class="post-card-cat__thumb">
+              <img
+                src="https://placehold.co/600x375/e8edec/c0cecc?text=+"
+                alt="Título da Postagem 3"
+              />
+            </div>
+            <div class="post-card-cat__body">
+              <h2 class="post-card-cat__title">Título da Postagem 3</h2>
+              <time class="post-card-cat__date" datetime="2025-07-31"
+                >31 Jul 2025</time
+              >
+            </div>
+          </article>
+
+          <article class="post-card-cat">
+            <div class="post-card-cat__thumb">
+              <img
+                src="https://placehold.co/600x375/e8edec/c0cecc?text=+"
+                alt="Título da Postagem 4"
+              />
+            </div>
+            <div class="post-card-cat__body">
+              <h2 class="post-card-cat__title">Título da Postagem 4</h2>
+              <time class="post-card-cat__date" datetime="2025-07-31"
+                >31 Jul 2025</time
+              >
+            </div>
+          </article>
+
+          <article class="post-card-cat">
+            <div class="post-card-cat__thumb">
+              <img
+                src="https://placehold.co/600x375/e8edec/c0cecc?text=+"
+                alt="Título da Postagem 5"
+              />
+            </div>
+            <div class="post-card-cat__body">
+              <h2 class="post-card-cat__title">Título da Postagem 5</h2>
+              <time class="post-card-cat__date" datetime="2025-07-31"
+                >31 Jul 2025</time
+              >
+            </div>
+          </article>
+
+          <article class="post-card-cat">
+            <div class="post-card-cat__thumb">
+              <img
+                src="https://placehold.co/600x375/e8edec/c0cecc?text=+"
+                alt="Título da Postagem 6"
+              />
+            </div>
+            <div class="post-card-cat__body">
+              <h2 class="post-card-cat__title">Título da Postagem 6</h2>
+              <time class="post-card-cat__date" datetime="2025-07-31"
+                >31 Jul 2025</time
+              >
+            </div>
+          </article>
+
+          <article class="post-card-cat">
+            <div class="post-card-cat__thumb">
+              <img
+                src="https://placehold.co/600x375/e8edec/c0cecc?text=+"
+                alt="Título da Postagem 7"
+              />
+            </div>
+            <div class="post-card-cat__body">
+              <h2 class="post-card-cat__title">Título da Postagem 7</h2>
+              <time class="post-card-cat__date" datetime="2025-07-31"
+                >31 Jul 2025</time
+              >
+            </div>
+          </article>
+
+          <article class="post-card-cat">
+            <div class="post-card-cat__thumb">
+              <img
+                src="https://placehold.co/600x375/e8edec/c0cecc?text=+"
+                alt="Título da Postagem 8"
+              />
+            </div>
+            <div class="post-card-cat__body">
+              <h2 class="post-card-cat__title">Título da Postagem 8</h2>
+              <time class="post-card-cat__date" datetime="2025-07-31"
+                >31 Jul 2025</time
+              >
+            </div>
+          </article>
+
+          <!-- Card 9 -->
+          <article class="post-card-cat">
+            <div class="post-card-cat__thumb">
+              <img
+                src="https://placehold.co/600x375/e8edec/c0cecc?text=+"
+                alt="Título da Postagem 9"
+              />
+            </div>
+            <div class="post-card-cat__body">
+              <h2 class="post-card-cat__title">Título da Postagem 9</h2>
+              <time class="post-card-cat__date" datetime="2025-07-31"
+                >31 Jul 2025</time
+              >
+            </div>
+          </article>
+        </section>
+
+        <div class="load-more-wrapper">
+          <button class="btn-secondary" type="button">Carregar mais</button>
+        </div>
+
+        <section class="brand-bar" aria-label="Marcas em destaque">
+          <ul>
+            <li>Instagram</li>
+            <li>Work</li>
+            <li>Bags</li>
+            <li>Lamp</li>
+            <li>Books</li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2025 Meu Site • Meu Site</p>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/29e9b51bce.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/script.js"></script>
+    
+  </body>
+</html>

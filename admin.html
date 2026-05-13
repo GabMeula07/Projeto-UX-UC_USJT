@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin — Habit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/admin.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <strong class="logo">HABIT</strong>
+
+        <nav id="main-nav" class="nav-menu" aria-label="Navegação principal">
+          <div class="menu-header">
+            <strong class="logo-menu">HABIT</strong>
+            <button type="button" class="close-menu" aria-label="Fechar menu">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+
+          <ul>
+            <li><a href="./index.html">Início</a></li>
+            <li><a href="#">Páginas</a></li>
+            <li><a href="./destaque.html">Destaques</a></li>
+            <li><a href="./assinar.html">Assinar</a></li>
+            <li>
+              <a href="./admin.html" aria-current="page">Admin</a>
+            </li>
+          </ul>
+
+          <div class="menu-footer-mobile">
+            <a href="#" class="btn-login-mobile">Entrar</a>
+          </div>
+        </nav>
+
+        <div class="header-actions">
+          <button
+            type="button"
+            class="search-toggle"
+            aria-label="Abrir busca"
+            hidden
+          >
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+
+          <form role="search" class="search-form">
+            <label for="buscar" class="sr-only">Buscar conteúdo</label>
+            <input
+              type="search"
+              id="buscar"
+              name="q"
+              placeholder="Buscar"
+              autocomplete="off"
+              enterkeyhint="search"
+            />
+            <button
+              type="submit"
+              class="btn-secondary search-form__submit"
+              aria-label="Buscar"
+            >
+              <span class="search-form__submit-label">Buscar</span>
+              <i
+                class="fa-solid fa-magnifying-glass search-form__submit-icon"
+                aria-hidden="true"
+              ></i>
+            </button>
+          </form>
+
+          <a href="#" class="btn-secondary btn-login">Entrar</a>
+
+          <button
+            type="button"
+            class="menu-toggle"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="main-nav"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="admin-shell">
+          <div class="stats-row">
+            <div class="stat-card">
+              <span class="stat-card__label">Posts</span>
+              <span class="stat-card__value">128</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-card__label">Visualizações</span>
+              <span class="stat-card__value">54k</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-card__label">Inscritos</span>
+              <span class="stat-card__value">12k</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-card__label">Pendências</span>
+              <span class="stat-card__value">7</span>
+            </div>
+          </div>
+
+          <div class="admin-body">
+            <aside class="admin-sidebar" aria-label="Menu admin">
+              <h2>Menu</h2>
+              <ul>
+                <li>
+                  <a href="#" class="nav-link active" data-panel="categorias"
+                    >Categorias</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="nav-link" data-panel="criar-post"
+                    >Criar Post</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="nav-link" data-panel="escolhas"
+                    >Escolhas do Editor</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="nav-link" data-panel="usuarios"
+                    >Usuários</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="nav-link" data-panel="revisao"
+                    >Fila de revisão</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="nav-link" data-panel="comentarios"
+                    >Fila de comentários</a
+                  >
+                </li>
+              </ul>
+            </aside>
+
+            <div class="admin-content" aria-live="polite">
+              <div id="panel-categorias" class="admin-panel active">
+                <h2>Categorias</h2>
+                <input
+                  class="panel-search"
+                  type="search"
+                  placeholder="Buscar categorias…"
+                  aria-label="Buscar categorias"
+                />
+
+                <div class="table-head cat-head">
+                  <span>Categoria</span>
+                  <span></span>
+                </div>
+
+                <div class="cat-row">
+                  <span class="cat-row__name">Categoria #1</span>
+                  <div class="cat-row__actions">
+                    <button type="button" class="btn-edit">Editar</button>
+                    <button type="button" class="btn-delete">Excluir</button>
+                  </div>
+                </div>
+                <div class="cat-row">
+                  <span class="cat-row__name">Categoria #2</span>
+                  <div class="cat-row__actions">
+                    <button type="button" class="btn-edit">Editar</button>
+                    <button type="button" class="btn-delete">Excluir</button>
+                  </div>
+                </div>
+                <div class="cat-row">
+                  <span class="cat-row__name">Categoria #3</span>
+                  <div class="cat-row__actions">
+                    <button type="button" class="btn-edit">Editar</button>
+                    <button type="button" class="btn-delete">Excluir</button>
+                  </div>
+                </div>
+                <div class="cat-row">
+                  <span class="cat-row__name">Categoria #4</span>
+                  <div class="cat-row__actions">
+                    <button type="button" class="btn-edit">Editar</button>
+                    <button type="button" class="btn-delete">Excluir</button>
+                  </div>
+                </div>
+                <div class="cat-row">
+                  <span class="cat-row__name">Categoria #5</span>
+                  <div class="cat-row__actions">
+                    <button type="button" class="btn-edit">Editar</button>
+                    <button type="button" class="btn-delete">Excluir</button>
+                  </div>
+                </div>
+              </div>
+
+              <div id="panel-criar-post" class="admin-panel">
+                <h2>Criar Post</h2>
+                <form id="form-novo-post" class="post-form">
+                  <div class="post-form__field">
+                    <label for="post-titulo">Título</label>
+                    <input
+                      type="text"
+                      id="post-titulo"
+                      name="titulo"
+                      class="post-form__input"
+                      placeholder="Título do post"
+                      autocomplete="off"
+                      required
+                    />
+                  </div>
+                  <div class="post-form__field">
+                    <label for="post-conteudo">Conteúdo</label>
+                    <textarea
+                      id="post-conteudo"
+                      name="conteudo"
+                      class="post-form__textarea"
+                      rows="10"
+                      placeholder="Escreva o conteúdo do post…"
+                      required
+                    ></textarea>
+                  </div>
+                  <button type="submit" class="btn-primary">
+                    Guardar post
+                  </button>
+                </form>
+              </div>
+
+              <div id="panel-escolhas" class="admin-panel">
+                <h2>Escolhas do Editor</h2>
+                <input
+                  class="panel-search"
+                  type="search"
+                  placeholder="Buscar posts em destaque…"
+                  aria-label="Buscar posts em destaque"
+                />
+
+                <div class="table-head editor-picks-head">
+                  <span>Post</span>
+                  <span>Ações</span>
+                </div>
+
+                <div class="editor-pick-row">
+                  <span class="editor-pick-row__title"
+                    >O futuro do trabalho remoto</span
+                  >
+                  <div class="review-row__actions">
+                    <button type="button" class="btn-remove-pick">
+                      Retirar
+                    </button>
+                  </div>
+                </div>
+                <div class="editor-pick-row">
+                  <span class="editor-pick-row__title"
+                    >Como escalar equipas pequenas</span
+                  >
+                  <div class="review-row__actions">
+                    <button type="button" class="btn-remove-pick">
+                      Retirar
+                    </button>
+                  </div>
+                </div>
+                <div class="editor-pick-row">
+                  <span class="editor-pick-row__title"
+                    >Design systems na prática</span
+                  >
+                  <div class="review-row__actions">
+                    <button type="button" class="btn-remove-pick">
+                      Retirar
+                    </button>
+                  </div>
+                </div>
+                <div class="editor-pick-row">
+                  <span class="editor-pick-row__title"
+                    >Notas sobre produtividade criativa</span
+                  >
+                  <div class="review-row__actions">
+                    <button type="button" class="btn-remove-pick">
+                      Retirar
+                    </button>
+                  </div>
+                </div>
+                <div class="editor-pick-row">
+                  <span class="editor-pick-row__title"
+                    >Leituras de maio</span
+                  >
+                  <div class="review-row__actions">
+                    <button type="button" class="btn-remove-pick">
+                      Retirar
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div id="panel-usuarios" class="admin-panel">
+                <h2>Usuários</h2>
+                <input
+                  class="panel-search"
+                  type="search"
+                  placeholder="Buscar por nome ou e-mail…"
+                  aria-label="Buscar utilizadores"
+                />
+
+                <div class="table-head users-head">
+                  <span>Utilizador</span>
+                  <span>E-mail</span>
+                  <span>Status</span>
+                  <span>Ações</span>
+                </div>
+
+                <div class="user-row">
+                  <span class="user-row__name">Maria Silva</span>
+                  <span class="user-row__email">maria.silva@email.com</span>
+                  <span class="user-row__status">Ativo</span>
+                  <div class="review-row__actions">
+                    <button type="button" class="btn-block">Bloquear</button>
+                  </div>
+                </div>
+                <div class="user-row">
+                  <span class="user-row__name">João Ferreira</span>
+                  <span class="user-row__email">joao.f@email.com</span>
+                  <span class="user-row__status">Ativo</span>
+                  <div class="review-row__actions">
+                    <button type="button" class="btn-block">Bloquear</button>
+                  </div>
+                </div>
+                <div class="user-row">
+                  <span class="user-row__name">Ana Costa</span>
+                  <span class="user-row__email">ana.costa@email.com</span>
+                  <span class="user-row__status">Pendente</span>
+                  <div class="review-row__actions">
+                    <button type="button" class="btn-block">Bloquear</button>
+                  </div>
+                </div>
+                <div class="user-row">
+                  <span class="user-row__name">Pedro Alves</span>
+                  <span class="user-row__email">pedro.alves@email.com</span>
+                  <span class="user-row__status">Bloqueado</span>
+                  <div class="review-row__actions">
+                    <button type="button" class="btn-block" disabled>
+                      Bloquear
+                    </button>
+                  </div>
+                </div>
+                <div class="user-row">
+                  <span class="user-row__name">Inês Martins</span>
+                  <span class="user-row__email">ines.martins@email.com</span>
+                  <span class="user-row__status">Ativo</span>
+                  <div class="review-row__actions">
+                    <button type="button" class="btn-block">Bloquear</button>
+                  </div>
+                </div>
+              </div>
+
+              <div id="panel-revisao" class="admin-panel">
+                <h2>Fila de revisão</h2>
+                <input
+                  class="panel-search"
+                  type="search"
+                  placeholder="Buscar posts…"
+                  aria-label="Buscar posts"
+                />
+
+                <div class="table-head review-head">
+                  <span>Título</span>
+                  <span>Autor</span>
+                  <span>Status</span>
+                  <span>Ações</span>
+                </div>
+
+                <div class="review-row">
+                  <span>Post #1</span><span>Autor 1</span>
+                  <span>Em revisão</span>
+                  <div class="review-row__actions">
+                    <button type="button" class="btn-approve">Aprovar</button>
+                    <button type="button" class="btn-reject">Reprovar</button>
+                  </div>
+                </div>
+                <div class="review-row">
+                  <span>Post #2</span><span>Autor 2</span>
+                  <span>Em revisão</span>
+                  <div class="review-row__actions">
+                    <button type="button" class="btn-approve">Aprovar</button>
+                    <button type="button" class="btn-reject">Reprovar</button>
+                  </div>
+                </div>
+                <div class="review-row">
+                  <span>Post #3</span><span>Autor 3</span>
+                  <span>Em revisão</span>
+                  <div class="review-row__actions">
+                    <button type="button" class="btn-approve">Aprovar</button>
+                    <button type="button" class="btn-reject">Reprovar</button>
+                  </div>
+                </div>
+                <div class="review-row">
+                  <span>Post #4</span><span>Autor 4</span>
+                  <span>Em revisão</span>
+                  <div class="review-row__actions">
+                    <button type="button" class="btn-approve">Aprovar</button>
+                    <button type="button" class="btn-reject">Reprovar</button>
+                  </div>
+                </div>
+                <div class="review-row">
+                  <span>Post #5</span><span>Autor 5</span>
+                  <span>Em revisão</span>
+                  <div class="review-row__actions">
+                    <button type="button" class="btn-approve">Aprovar</button>
+                    <button type="button" class="btn-reject">Reprovar</button>
+                  </div>
+                </div>
+              </div>
+
+              <div id="panel-comentarios" class="admin-panel">
+                <h2>Fila de comentários</h2>
+                <input
+                  class="panel-search"
+                  type="search"
+                  placeholder="Buscar comentários…"
+                  aria-label="Buscar comentários"
+                />
+
+                <div class="table-head review-head">
+                  <span>Título</span>
+                  <span>Autor</span>
+                  <span>Status</span>
+                  <span>Ações</span>
+                </div>
+
+                <div class="review-row">
+                  <span>Comentário #1</span><span>Utilizador 1</span>
+                  <span>Em revisão</span>
+                  <div class="review-row__actions">
+                    <button type="button" class="btn-approve">Aprovar</button>
+                    <button type="button" class="btn-reject">Reprovar</button>
+                  </div>
+                </div>
+                <div class="review-row">
+                  <span>Comentário #2</span><span>Utilizador 2</span>
+                  <span>Em revisão</span>
+                  <div class="review-row__actions">
+                    <button type="button" class="btn-approve">Aprovar</button>
+                    <button type="button" class="btn-reject">Reprovar</button>
+                  </div>
+                </div>
+                <div class="review-row">
+                  <span>Comentário #3</span><span>Utilizador 3</span>
+                  <span>Em revisão</span>
+                  <div class="review-row__actions">
+                    <button type="button" class="btn-approve">Aprovar</button>
+                    <button type="button" class="btn-reject">Reprovar</button>
+                  </div>
+                </div>
+                <div class="review-row">
+                  <span>Comentário #4</span><span>Utilizador 4</span>
+                  <span>Em revisão</span>
+                  <div class="review-row__actions">
+                    <button type="button" class="btn-approve">Aprovar</button>
+                    <button type="button" class="btn-reject">Reprovar</button>
+                  </div>
+                </div>
+                <div class="review-row">
+                  <span>Comentário #5</span><span>Utilizador 5</span>
+                  <span>Em revisão</span>
+                  <div class="review-row__actions">
+                    <button type="button" class="btn-approve">Aprovar</button>
+                    <button type="button" class="btn-reject">Reprovar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="brand-bar" aria-label="Marcas em destaque">
+          <ul>
+            <li>Instagram</li>
+            <li>Work</li>
+            <li>Bags</li>
+            <li>Lamp</li>
+            <li>Books</li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2026 HABIT • Todos os direitos reservados</p>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/29e9b51bce.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/script.js"></script>
+    <script src="./assets/admin_script.js"></script>
+  </body>
+</html>

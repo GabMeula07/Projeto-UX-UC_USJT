@@ -2,6 +2,7 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>HABIT - Navegue por tópicos</title>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
@@ -23,8 +24,8 @@
           <ul>
             <li><a href="#">Início</a></li>
             <li><a href="#">Páginas</a></li>
-            <li><a href="#">Destaques</a></li>
-            <li><a href="#">Assinar</a></li>
+            <li><a href="./destaque.html">Destaques</a></li>
+            <li><a href="./assinar.html">Assinar</a></li>
             <li><a href="#">Admin</a></li>
           </ul>
 
@@ -54,13 +55,20 @@
               autocomplete="off"
               enterkeyhint="search"
             />
-            <button type="submit">
-              <span class="sr-only">Buscar</span
-              ><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            <button
+              type="submit"
+              class="btn-secondary search-form__submit"
+              aria-label="Buscar"
+            >
+              <span class="search-form__submit-label">Buscar</span>
+              <i
+                class="fa-solid fa-magnifying-glass search-form__submit-icon"
+                aria-hidden="true"
+              ></i>
             </button>
           </form>
 
-          <a href="#" class="btn-login">Entrar</a>
+          <a href="#" class="btn-secondary btn-login">Entrar</a>
 
           <button
             class="menu-toggle"
@@ -76,14 +84,16 @@
 
     <main>
       <section class="hero">
-        <h1>Navegue por tópicos de interesse</h1>
-        <p>
-          Descubra conteúdos por categorias, posts em destaque e as escolhas do
-          editor.
-        </p>
-        <div class="hero-buttons">
-          <a href="#" class="btn-primary">Explorar categorias</a>
-          <a href="#" class="btn-secondary">Assine a newsletter</a>
+        <div>
+          <h1>Navegue por tópicos de interesse</h1>
+          <p>
+            Descubra conteúdos por categorias, posts em destaque e as escolhas
+            do editor.
+          </p>
+          <div class="hero-buttons">
+            <a href="#" class="btn-primary">Explorar categorias</a>
+            <a href="#" class="btn-secondary">Assine a newsletter</a>
+          </div>
         </div>
         <img src="https://placehold.co/600x400" alt="" />
       </section>
@@ -95,9 +105,15 @@
       >
         <h2 id="titulo-cat-populares">Categorias Populares</h2>
         <div class="grid-categories">
-          <article><h3>Work</h3></article>
-          <article><h3>Books</h3></article>
-          <article><h3>Techno</h3></article>
+          <article>
+            <h3><a href="./categoria.html?categoria=Work">Work</a></h3>
+          </article>
+          <article>
+            <h3><a href="./categoria.html?categoria=Books">Books</a></h3>
+          </article>
+          <article>
+            <h3><a href="./categoria.html?categoria=Techno">Techno</a></h3>
+          </article>
         </div>
       </section>
 
@@ -106,16 +122,20 @@
         <h2>Todas as Categorias</h2>
         <nav aria-label="Tags de categorias">
           <ul>
-            <li><a href="#">Negócios</a></li>
-            <li><a href="#">Techno</a></li>
-            <li><a href="#">Produtividade</a></li>
-            <li><a href="#">eCommerce</a></li>
-            <li><a href="#">Mailing</a></li>
-            <li><a href="#">Educação</a></li>
-            <li><a href="#">Filme</a></li>
-            <li><a href="#">Lifestyle</a></li>
-            <li><a href="#">Alimentação</a></li>
-            <li><a href="#">Social</a></li>
+            <li><a href="./categoria.html"></a></li>
+            <li><a href="./categoria.html">Techno</a></li>
+            <li>
+              <a href="./categoria.html">Produtividade</a>
+            </li>
+            <li><a href="./categoria.html">eCommerce</a></li>
+            <li><a href="./categoria.html">Mailing</a></li>
+            <li><a href="./categoria.html">Educação</a></li>
+            <li><a href="./categoria.html"></a></li>
+            <li><a href="./categoria.html">Lifestyle</a></li>
+            <li>
+              <a href="./categoria.html">Alimentação</a>
+            </li>
+            <li><a href="./categoria.html">Social</a></li>
           </ul>
         </nav>
       </section>

@@ -1,0 +1,118 @@
+/* Página Assinar — newsletter (tokens, header, main, footer em style.css) */
+
+.subscribe-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100dvh - var(--header-height) - 1px - 12rem);
+  padding-block: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  background-color: var(--color-surface-muted);
+  border-radius: var(--radius-md);
+}
+
+.subscribe-card {
+  width: 100%;
+  max-width: 24rem;
+  padding: var(--space-xl);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.subscribe-card h1 {
+  margin-bottom: var(--space-lg);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.subscribe-card .field-email {
+  width: 100%;
+  height: 2.625rem;
+  margin-bottom: var(--space-md);
+  padding-inline: var(--space-md);
+  font-family: inherit;
+  font-size: var(--text-body);
+  color: var(--color-text);
+  appearance: none;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.subscribe-card .field-email::placeholder {
+  color: var(--color-text-muted);
+}
+
+.subscribe-card .field-email:focus {
+  outline: none;
+  border-color: var(--color-brand);
+  box-shadow: 0 0 0 3px var(--color-focus-ring);
+}
+
+.subscribe-card .checkbox-row {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.subscribe-card .checkbox-row input[type="checkbox"] {
+  flex-shrink: 0;
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.15rem;
+  accent-color: var(--color-brand);
+  cursor: pointer;
+}
+
+.subscribe-card .checkbox-row label {
+  font-size: var(--text-sm);
+  line-height: 1.45;
+  color: var(--color-text-muted);
+  cursor: pointer;
+}
+
+.subscribe-card .checkbox-row label a {
+  color: var(--color-brand);
+  text-decoration: underline;
+}
+
+.btn-subscribe {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-sm) var(--space-lg);
+  font-family: inherit;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  background-color: var(--color-brand);
+  border: 1px solid var(--color-brand);
+  border-radius: var(--radius-sm);
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.btn-subscribe:hover {
+  background-color: var(--color-brand-dark);
+  border-color: var(--color-brand-dark);
+}
+
+.btn-subscribe:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+}
+
+@media (max-width: 320px) {
+  .subscribe-card {
+    padding: var(--space-md);
+  }
+
+  .subscribe-card h1 {
+    font-size: 1.25rem;
+  }
+}

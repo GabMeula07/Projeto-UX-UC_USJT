@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assinar Newsletter — Habit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/assinar.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <strong class="logo">HABIT</strong>
+
+        <nav id="main-nav" class="nav-menu" aria-label="Navegação principal">
+          <div class="menu-header">
+            <strong class="logo-menu">HABIT</strong>
+            <button type="button" class="close-menu" aria-label="Fechar menu">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+
+          <ul>
+            <li><a href="./index.html">Início</a></li>
+            <li><a href="#">Páginas</a></li>
+            <li><a href="./destaque.html">Destaques</a></li>
+            <li><a href="./assinar.html" aria-current="page">Assinar</a></li>
+            <li><a href="#">Admin</a></li>
+          </ul>
+
+          <div class="menu-footer-mobile">
+            <a href="#" class="btn-login-mobile">Entrar</a>
+          </div>
+        </nav>
+
+        <div class="header-actions">
+          <button
+            type="button"
+            class="search-toggle"
+            aria-label="Abrir busca"
+            hidden
+          >
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+
+          <form role="search" class="search-form">
+            <label for="buscar" class="sr-only">Buscar conteúdo</label>
+            <input
+              type="search"
+              id="buscar"
+              name="q"
+              placeholder="Buscar"
+              autocomplete="off"
+              enterkeyhint="search"
+            />
+            <button
+              type="submit"
+              class="btn-secondary search-form__submit"
+              aria-label="Buscar"
+            >
+              <span class="search-form__submit-label">Buscar</span>
+              <i
+                class="fa-solid fa-magnifying-glass search-form__submit-icon"
+                aria-hidden="true"
+              ></i>
+            </button>
+          </form>
+
+          <a href="#" class="btn-secondary btn-login">Entrar</a>
+
+          <button
+            type="button"
+            class="menu-toggle"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="main-nav"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <section class="subscribe-section" aria-labelledby="subscribe-title">
+          <div class="subscribe-card">
+            <h1 id="subscribe-title">Assine a newsletter</h1>
+
+            <label for="email" class="sr-only">E-mail</label>
+            <input
+              class="field-email"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="E-mail"
+              autocomplete="email"
+              required
+            />
+
+            <div class="checkbox-row">
+              <input type="checkbox" id="privacy" name="privacy" required />
+              <label for="privacy">
+                Concordo em receber comunicações e li a
+                <a href="#">política de privacidade</a>.
+              </label>
+            </div>
+
+            <button type="button" class="btn-subscribe" id="btnSubscribe">
+              Assinar
+            </button>
+          </div>
+        </section>
+
+        <section class="brand-bar" aria-label="Marcas em destaque">
+          <ul>
+            <li>Instagram</li>
+            <li>Work</li>
+            <li>Bags</li>
+            <li>Lamp</li>
+            <li>Books</li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2026 HABIT • Todos os direitos reservados</p>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/29e9b51bce.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/script.js"></script>
+    <script src="./assets/assinar_script.js"></script>
+  </body>
+</html>
