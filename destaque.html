@@ -1,25 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Categoria: Techno — Habit</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/category.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destaques — HABIT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/category.css" />
+  </head>
+  <body>
     <header>
       <div class="container">
         <strong class="logo">HABIT</strong>
 
-        <!-- Overlay de navegação mobile -->
         <nav id="main-nav" class="nav-menu" aria-label="Navegação principal">
           <div class="menu-header">
             <strong class="logo-menu">HABIT</strong>
-            <button class="close-menu" aria-label="Fechar menu">
+            <button type="button" class="close-menu" aria-label="Fechar menu">
               <i class="fa-solid fa-xmark"></i>
             </button>
           </div>
@@ -27,9 +29,11 @@
           <ul>
             <li><a href="./index.html">Início</a></li>
             <li><a href="#">Páginas</a></li>
-            <li><a href="./destaque.html">Destaques</a></li>
+            <li>
+              <a href="./destaque.html" aria-current="page">Destaques</a>
+            </li>
             <li><a href="./assinar.html">Assinar</a></li>
-            <li><a href="#">Admin</a></li>
+            <li><a href="./admin.html">Admin</a></li>
           </ul>
 
           <div class="menu-footer-mobile">
@@ -37,7 +41,6 @@
           </div>
         </nav>
 
-        <!-- Ações do header: busca inline no mobile first; lupa reservada p/ breakpoints futuros -->
         <div class="header-actions">
           <button
             type="button"
@@ -74,6 +77,7 @@
           <a href="#" class="btn-secondary btn-login">Entrar</a>
 
           <button
+            type="button"
             class="menu-toggle"
             aria-label="Abrir menu"
             aria-expanded="false"
@@ -85,131 +89,145 @@
       </div>
     </header>
 
-  <!-- ── Conteúdo principal ──────────────────────────────── -->
-  <main>
-    <div class="container">
+    <main>
+      <div class="container">
+        <div class="category-header">
+          <h1>Destaques</h1>
+        </div>
 
-      <!-- Cabeçalho da categoria -->
-      <div class="category-header">
-        <h1>Destaques</h1>
+        <section
+          class="category-grid"
+          aria-label="Postagens em destaque na plataforma"
+        >
+          <article class="post-card-cat">
+            <div class="post-card-cat__thumb">
+              <img
+                src="https://placehold.co/600x375/e8edec/c0cecc?text=+"
+                alt="Capa do destaque 1"
+              />
+            </div>
+            <div class="post-card-cat__body">
+              <h2 class="post-card-cat__title">Destaque 1</h2>
+            </div>
+          </article>
 
-      <!-- Grade de posts -->
-      <section class="category-grid" aria-label="Posts da categoria Techno">
+          <article class="post-card-cat">
+            <div class="post-card-cat__thumb">
+              <img
+                src="https://placehold.co/600x375/e8edec/c0cecc?text=+"
+                alt="Capa do destaque 2"
+              />
+            </div>
+            <div class="post-card-cat__body">
+              <h2 class="post-card-cat__title">Destaque 2</h2>
+            </div>
+          </article>
 
-        
-        <article class="post-card-cat">
-          <div class="post-card-cat__thumb">
-            <img src="https://placehold.co/600x375/e8edec/c0cecc?text=+" alt="Título da Postagem 1" />
-          </div>
-          <div class="post-card-cat__body">
-            <h2 class="post-card-cat__title">Destaque 1</h2>
-          </div>
-        </article>
+          <article class="post-card-cat">
+            <div class="post-card-cat__thumb">
+              <img
+                src="https://placehold.co/600x375/e8edec/c0cecc?text=+"
+                alt="Capa do destaque 3"
+              />
+            </div>
+            <div class="post-card-cat__body">
+              <h2 class="post-card-cat__title">Destaque 3</h2>
+            </div>
+          </article>
 
-        
-        <article class="post-card-cat">
-          <div class="post-card-cat__thumb">
-            <img src="https://placehold.co/600x375/e8edec/c0cecc?text=+" alt="Destaque 2" />
-          </div>
-          <div class="post-card-cat__body">
-            <h2 class="post-card-cat__title">Destaque 2</h2>
-          </div>
-        </article>
+          <article class="post-card-cat">
+            <div class="post-card-cat__thumb">
+              <img
+                src="https://placehold.co/600x375/e8edec/c0cecc?text=+"
+                alt="Capa do destaque 4"
+              />
+            </div>
+            <div class="post-card-cat__body">
+              <h2 class="post-card-cat__title">Destaque 4</h2>
+            </div>
+          </article>
 
-        <article class="post-card-cat">
-          <div class="post-card-cat__thumb">
-            <img src="https://placehold.co/600x375/e8edec/c0cecc?text=+" alt="Destaque 3" />
-          </div>
-          <div class="post-card-cat__body">
-            <h2 class="post-card-cat__title">Destaque 3</h2>
-          </div>
-        </article>
+          <article class="post-card-cat">
+            <div class="post-card-cat__thumb">
+              <img
+                src="https://placehold.co/600x375/e8edec/c0cecc?text=+"
+                alt="Capa do destaque 5"
+              />
+            </div>
+            <div class="post-card-cat__body">
+              <h2 class="post-card-cat__title">Destaque 5</h2>
+            </div>
+          </article>
 
-        
-        <article class="post-card-cat">
-          <div class="post-card-cat__thumb">
-            <img src="https://placehold.co/600x375/e8edec/c0cecc?text=+" alt="Destaque 4" />
-          </div>
-          <div class="post-card-cat__body">
-            <h2 class="post-card-cat__title">Destaque 4</h2>
-          </div>
-        </article>
+          <article class="post-card-cat">
+            <div class="post-card-cat__thumb">
+              <img
+                src="https://placehold.co/600x375/e8edec/c0cecc?text=+"
+                alt="Capa do destaque 6"
+              />
+            </div>
+            <div class="post-card-cat__body">
+              <h2 class="post-card-cat__title">Destaque 6</h2>
+            </div>
+          </article>
 
-        
-        <article class="post-card-cat">
-          <div class="post-card-cat__thumb">
-            <img src="https://placehold.co/600x375/e8edec/c0cecc?text=+" alt="Destaque 5" />
-          </div>
-          <div class="post-card-cat__body">
-            <h2 class="post-card-cat__title">Destaque 5</h2>
-          </div>
-        </article>
+          <article class="post-card-cat">
+            <div class="post-card-cat__thumb">
+              <img
+                src="https://placehold.co/600x375/e8edec/c0cecc?text=+"
+                alt="Capa do destaque 7"
+              />
+            </div>
+            <div class="post-card-cat__body">
+              <h2 class="post-card-cat__title">Destaque 7</h2>
+            </div>
+          </article>
 
-        
-        <article class="post-card-cat">
-          <div class="post-card-cat__thumb">
-            <img src="https://placehold.co/600x375/e8edec/c0cecc?text=+" alt="Destaque 6" />
-          </div>
-          <div class="post-card-cat__body">
-            <h2 class="post-card-cat__title">Destaque 6</h2>
-          </div>
-        </article>
+          <article class="post-card-cat">
+            <div class="post-card-cat__thumb">
+              <img
+                src="https://placehold.co/600x375/e8edec/c0cecc?text=+"
+                alt="Capa do destaque 8"
+              />
+            </div>
+            <div class="post-card-cat__body">
+              <h2 class="post-card-cat__title">Destaque 8</h2>
+            </div>
+          </article>
 
-        
-        <article class="post-card-cat">
-          <div class="post-card-cat__thumb">
-            <img src="https://placehold.co/600x375/e8edec/c0cecc?text=+" alt="Destaque 7" />
-          </div>
-          <div class="post-card-cat__body">
-            <h2 class="post-card-cat__title">Destaque 7</h2>
-          </div>
-        </article>
+          <article class="post-card-cat">
+            <div class="post-card-cat__thumb">
+              <img
+                src="https://placehold.co/600x375/e8edec/c0cecc?text=+"
+                alt="Capa do destaque 9"
+              />
+            </div>
+            <div class="post-card-cat__body">
+              <h2 class="post-card-cat__title">Destaque 9</h2>
+            </div>
+          </article>
+        </section>
 
-        
-        <article class="post-card-cat">
-          <div class="post-card-cat__thumb">
-            <img src="https://placehold.co/600x375/e8edec/c0cecc?text=+" alt="Destaque 8" />
-          </div>
-          <div class="post-card-cat__body">
-            <h2 class="post-card-cat__title">Destaque 8</h2>
-          </div>
-        </article>
+        <section class="brand-bar" aria-label="Marcas em destaque">
+          <ul>
+            <li>Instagram</li>
+            <li>Work</li>
+            <li>Bags</li>
+            <li>Lamp</li>
+            <li>Books</li>
+          </ul>
+        </section>
+      </div>
+    </main>
 
-        <!-- Card 9 -->
-        <article class="post-card-cat">
-          <div class="post-card-cat__thumb">
-            <img src="https://placehold.co/600x375/e8edec/c0cecc?text=+" alt="Destaque 9" />
-          </div>
-          <div class="post-card-cat__body">
-            <h2 class="post-card-cat__title">Destaque 9</h2>
-          </div>
-        </article>
-
-      </section>
-
-      <section class="brand-bar" aria-label="Marcas em destaque">
-        <ul>
-          <li>Instagram</li>
-          <li>Work</li>
-          <li>Bags</li>
-          <li>Lamp</li>
-          <li>Books</li>
-        </ul>
-      </section>
-
-    </div>
-  </main>
-
-  
-  <footer>
-    <p>© 2025 Meu Site • Meu Site</p>
-  </footer>
-   <script
+    <footer>
+      <p>&copy; 2026 HABIT • Todos os direitos reservados</p>
+    </footer>
+    <script
       src="https://kit.fontawesome.com/29e9b51bce.js"
       crossorigin="anonymous"
     ></script>
     <script src="./assets/script.js"></script>
-  <script src="./assets/category_script.js"></script>
-
-</body>
+    <script src="./assets/category_script.js"></script>
+  </body>
 </html>

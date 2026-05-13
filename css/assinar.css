@@ -47,6 +47,9 @@
 
 .subscribe-card .field-email:focus {
   outline: none;
+}
+
+.subscribe-card .field-email:focus-visible {
   border-color: var(--color-brand);
   box-shadow: 0 0 0 3px var(--color-focus-ring);
 }
@@ -107,7 +110,7 @@
   outline-offset: 2px;
 }
 
-@media (max-width: 320px) {
+@media (width <= 320px) {
   .subscribe-card {
     padding: var(--space-md);
   }

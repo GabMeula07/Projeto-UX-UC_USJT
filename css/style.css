@@ -5,13 +5,15 @@
   /* Cores */
   --color-text: #181a19;
   --color-text-muted: #585858;
-  --color-surface: #ffffff;
+  --color-surface: #fff;
   --color-surface-muted: #fafcfc;
   --color-border: #dfe8e6;
-  --color-border-subtle: #eeeeee;
+  --color-border-subtle: #eee;
   --color-brand: #26746d;
   --color-brand-dark: #162c2a;
-  --color-focus-ring: rgba(38, 116, 109, 0.2);
+  --color-focus-ring: rgb(38 116 109 / 20%);
+  --focus-outline: 2px solid var(--color-brand);
+  --focus-outline-offset: 2px;
 
   /* Espaçamento */
   --space-xs: 0.25rem;
@@ -191,6 +193,9 @@ header > .container {
 
 .header-actions .search-form input[type="search"]:focus {
   outline: none;
+}
+
+.header-actions .search-form input[type="search"]:focus-visible {
   border-color: var(--color-brand);
   box-shadow: 0 0 0 3px var(--color-focus-ring);
 }
@@ -264,7 +269,7 @@ header > .container {
   justify-content: space-between;
   width: 100%;
   padding-bottom: var(--space-xl);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgb(255 255 255 / 10%);
 }
 
 .logo-menu {
@@ -344,8 +349,7 @@ main {
 
 .hero-buttons {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  flex-flow: column wrap;
   gap: var(--space-sm);
 }
 
@@ -379,6 +383,45 @@ main {
 .btn-secondary {
   color: var(--color-brand);
   background-color: transparent;
+}
+
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-outline-offset);
+}
+
+.menu-toggle:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-outline-offset);
+}
+
+.close-menu:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: var(--focus-outline-offset);
+}
+
+.nav-menu li a:focus-visible,
+.btn-login-mobile:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: var(--focus-outline-offset);
+}
+
+.header-actions .btn-login:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-outline-offset);
+}
+
+.popular-categories .grid-categories article h3 a:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-outline-offset);
+  border-radius: 2px;
+}
+
+.sidebar a:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-outline-offset);
+  border-radius: 2px;
 }
 
 /*  8. Categorias populares */
@@ -527,8 +570,7 @@ main {
 
 .post-card {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  flex-flow: row nowrap;
   align-items: flex-start;
   column-gap: var(--space-md);
   padding: var(--space-md);
@@ -614,7 +656,7 @@ footer {
 }
 
 /* 12. Responsivo — até 320px  */
-@media (max-width: 320px) {
+@media (width <= 320px) {
   :root {
     --container-inline: var(--space-sm);
     --header-height: 4rem;
@@ -715,7 +757,7 @@ footer {
 
 /* 13. Responsivo — celular grande */
 
-@media (min-width: 480px) {
+@media (width >= 480px) {
   :root {
     --container-inline: var(--space-lg);
   }
@@ -741,7 +783,7 @@ footer {
 }
 
 /* 14. Responsivo — tablet (≥ 768px) */
-@media (min-width: 768px) {
+@media (width >= 768px) {
   :root {
     --header-height: 4.75rem;
     --container-inline: var(--space-xl);
@@ -804,7 +846,7 @@ footer {
 /* 
    15. Responsivo — tablet largo (≥ 900px) — refinamento, sem “desktop wide”
     */
-@media (min-width: 56.25rem) {
+@media (width >= 56.25rem) {
   header > .container,
   main,
   footer p {
@@ -821,8 +863,8 @@ footer {
   }
 }
 
-/* 16. Responsivo — desktop (≥ 1200px)*/
-@media (min-width: 1200px) {
+/* 16. Responsivo — desktop (≥ 1200px) */
+@media (width >= 1200px) {
   :root {
     --header-height: 5rem;
     --container-inline: var(--space-xl);
@@ -847,7 +889,6 @@ footer {
   .logo {
     flex-shrink: 0;
     margin: 0;
-
     padding-right: 2rem;
     font-size: 1.35rem;
   }
@@ -883,8 +924,7 @@ footer {
 
   .nav-menu ul {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     align-items: center;
     justify-content: flex-start;
     gap: 1rem;
@@ -959,8 +999,7 @@ footer {
   }
 
   .hero-buttons {
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
   }
 
   .hero .btn-primary,
@@ -1005,6 +1044,7 @@ footer {
   .popular-categories {
     width: 100%;
     margin-bottom: var(--space-3xl);
+
     --popular-card-min-h: 6.5rem;
   }
 
@@ -1063,8 +1103,7 @@ footer {
   }
 
   .post-card {
-    flex-direction: row;
-    flex-wrap: nowrap;
+    flex-flow: row nowrap;
     align-items: flex-start;
     column-gap: var(--space-lg);
     padding: var(--space-lg);
@@ -1094,7 +1133,7 @@ footer {
 
 /* 17. Responsivo — desktop largo (≥ 1440px) */
 
-@media (min-width: 1440px) {
+@media (width >= 1440px) {
   header > .container,
   main,
   footer p {

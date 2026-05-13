@@ -32,8 +32,7 @@ a {
   gap: var(--space-sm);
   padding-bottom: var(--space-xs);
   margin-bottom: var(--space-lg);
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow: auto hidden;
   list-style: none;
   scroll-snap-type: x proximity;
   -webkit-overflow-scrolling: touch;
@@ -92,8 +91,8 @@ a {
 }
 
 .post-card-cat:hover {
-  border-color: rgba(38, 116, 109, 0.35);
-  box-shadow: 0 4px 14px rgba(22, 44, 42, 0.06);
+  border-color: rgb(38 116 109 / 35%);
+  box-shadow: 0 4px 14px rgb(22 44 42 / 6%);
 }
 
 .post-card-cat__thumb {
@@ -188,7 +187,7 @@ footer {
 /* =============================================================================
    Celular pequeno — até 320px (refinos)
    ============================================================================= */
-@media (max-width: 320px) {
+@media (width <= 320px) {
   .category-header h1 {
     font-size: 1.375rem;
   }
@@ -216,7 +215,7 @@ footer {
 /* =============================================================================
    Celular grande — ≥ 480px (2 colunas na grade)
    ============================================================================= */
-@media (min-width: 480px) {
+@media (width >= 480px) {
   .category-header {
     margin-bottom: var(--space-xl);
   }
@@ -269,7 +268,7 @@ footer {
 /* =============================================================================
    Tablet — ≥ 768px (3 colunas, contentor centrado)
    ============================================================================= */
-@media (min-width: 768px) {
+@media (width >= 768px) {
   header > .container,
   main > .container,
   footer {
@@ -311,7 +310,7 @@ footer {
 /* =============================================================================
    Tablet largo — ≥ 900px
    ============================================================================= */
-@media (min-width: 56.25rem) {
+@media (width >= 56.25rem) {
   header > .container,
   main > .container,
   footer {
@@ -326,7 +325,7 @@ footer {
 /* =============================================================================
    Desktop — ≥ 1200px (só o que é específico da página; header em style.css)
    ============================================================================= */
-@media (min-width: 75rem) {
+@media (width >= 75rem) {
   header > .container,
   main > .container,
   footer {
@@ -369,7 +368,7 @@ footer {
 /* =============================================================================
    Desktop largo — ≥ 1440px
    ============================================================================= */
-@media (min-width: 90rem) {
+@media (width >= 90rem) {
   header > .container,
   main > .container,
   footer {
