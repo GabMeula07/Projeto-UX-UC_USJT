@@ -48,34 +48,6 @@ Viewports testados automaticamente na auditoria: **375**, **768** e **1440** px 
 
 Recomenda-se validar com **axe** / **Lighthouse** após alterações (`npm run audit`).
 
-## Como instalar e abrir localmente
-
-Requisitos: [Node.js](https://nodejs.org/) 18+.
-
-```bash
-npm install
-npx playwright install chromium
-npm start
-```
-
-Abre o browser em `http://localhost:4173` (porta definida no script `start`).
-
-## Auditoria e qualidade
-
-```bash
-npm run lint:css      # Stylelint nos ficheiros em css/
-npm run audit         # Relatório completo + axe + screenshots
-npm run audit:a11y    # Só análise axe em todas as páginas
-npm run audit:visual  # Screenshots + diff opcional com baseline
-npm run baseline:update   # Atualiza PNGs em docs/visual-baseline/
-```
-
-O relatório Markdown é escrito em [`docs/AUDIT-REPORT.md`](docs/AUDIT-REPORT.md).
-
-## Screenshots
-
-As capturas usadas na documentação e na auditoria são geradas para **mobile**, **tablet** e **desktop** e guardadas em [`docs/screenshots/`](docs/screenshots/). Correr `npm run audit` ou `npm run screenshots` para as atualizar.
-
 ## Decisões técnicas
 
 - **Tokens CSS** (cores, espaçamento, tipografia, raios) centralizados em `:root` para consistência e auditoria de contraste mais simples
